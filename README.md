@@ -60,13 +60,13 @@ Once this repository is cloned, please run the following command:
 
 Examples of how to apply the AMP demonstrative case study are available as jupyter notebook examples, please see:
 
-- Preparing AMP dataset: [notebooks/training_class_model.ipynb](notebooks_examples/training_class_model.ipynb)
-- Dataset description and exploratory analysis: [notebooks/03_amp_training_uncertainty.ipynb](notebooks/03_amp_training_uncertainty.ipynb)
+- Preparing AMP dataset: [notebooks/01_preparing_amp_dataset.ipynb](notebooks/01_preparing_amp_dataset.ipynb)
+- Dataset description and exploratory analysis: [notebooks/02_amp_dataset_description.ipynb](notebooks/02_amp_dataset_description.ipynb)
 - Distance-aware training with uncertainty estimation: [notebooks/03_amp_training_uncertainty.ipynb](notebooks/03_amp_training_uncertainty.ipynb)
 - Explainability and interpretable rule extraction: [notebooks/04_amp_explainability_shap_rules.ipynb](notebooks/04_amp_explainability_shap_rules.ipynb)
 - Rule-aware prioritization and candidate ranking: [notebooks/05_amp_rule_aware_prioritization.ipynb](notebooks/05_amp_rule_aware_prioritization.ipynb)
-- External candidate screening and illustrative Design–Test–Learn loop: [notebooks/6_amp_external_screening_dtl_loop_patched.ipynb](notebooks/6_amp_external_screening_dtl_loop_patched.ipynb)
-- Multipanel figure: [notebooks/07_generate_amp_demonstrative_case_figure_nature_v3.ipynb](notebooks/07_generate_amp_demonstrative_case_figure_nature_v3.ipynb)
+- External candidate screening and illustrative Design–Test–Learn loop: [notebooks/06_amp_external_screening_dtl_loop.ipynb](notebooks/6_amp_external_screening_dtl_loop_patched.ipynb)
+- Multipanel figure: [notebooks/07_generate_amp_demonstrative_case.ipynb](notebooks/07_generate_amp_demonstrative_case_figure_nature_v3.ipynb)
 
 <a name="implementation"></a>
 
