@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-05-22T13:56:12",
+  "training_metadata_path": "../outputs_training/training_metadata.json",
+  "best_model_selection_path": "../outputs_training/best_model_selection.json",
+  "best_model_name": "extra_trees",
+  "best_model_artifact": "../outputs_training/models/extra_trees_final_model.joblib",
+  "prediction_artifact": "../outputs_training/predictions/extra_trees_predictions_with_uncertainty.csv",
+  "n_total_samples": 47175,
+  "n_shap_samples": 1000,
+  "n_background_samples": 300,
+  "n_descriptors": 41,
+  "classifier_class": "ExtraTreesClassifier",
+  "shap_strategy": "TreeExplainer for tree models; LinearExplainer for linear models; model-agnostic fallback otherwise",
+  "local_explanation_n": 20,
+  "surrogate_tree_depth": 4,
+  "surrogate_min_samples_leaf": 330,
+  "outputs": {
+    "shap_matrix": "../outputs_explainability/tables/shap_values_matrix.csv",
+    "global_importance": "../outputs_explainability/tables/shap_global_importance_directionality.csv",
+    "candidate_rules": "../outputs_explainability/rules/candidate_interpretable_feature_rules_from_shap.csv",
+    "surrogate_rules": "../outputs_explainability/rules/surrogate_tree_rules.txt",
+    "combined_evidence": "../outputs_explainability/rules/combined_explainability_rule_evidence.csv",
+    "manuscript_summary": "../outputs_explainability/tables/manuscript_ready_explainability_summary.csv"
+  }
+}

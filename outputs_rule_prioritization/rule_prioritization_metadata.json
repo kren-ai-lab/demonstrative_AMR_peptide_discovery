@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-05-22T20:41:57",
+  "notebook": "05_rule_aware_prioritization",
+  "training_metadata_path": "../outputs_training/training_metadata.json",
+  "best_model_selection_path": "../outputs_training/best_model_selection.json",
+  "best_model_name": "extra_trees",
+  "prediction_path": "../outputs_training/predictions/extra_trees_predictions_with_uncertainty.csv",
+  "rule_evidence_path": "../outputs_explainability/rules/combined_explainability_rule_evidence.csv",
+  "candidate_rules_path": "../outputs_explainability/rules/candidate_interpretable_feature_rules_from_shap.csv",
+  "n_candidates": 47175,
+  "n_rules": 12,
+  "top_n_rules": 12,
+  "score_formula": "0.55 * P(AMP) + 0.30 * soft_rule_score + 0.15 * confidence_score",
+  "score_weights": {
+    "probability_amp_ensemble": 0.55,
+    "soft_rule_score": 0.3,
+    "confidence_score": 0.15
+  },
+  "uncertainty_normalization": "uncertainty_std divided by the 95th percentile and clipped to [0, 1]",
+  "candidate_pool_thresholds": {
+    "high_probability_cutoff": 0.8,
+    "low_probability_cutoff": 0.2,
+    "high_rule_score_cutoff": 0.7,
+    "low_rule_score_cutoff": 0.3,
+    "uncertainty_low_cutoff_q25": 0.0174,
+    "uncertainty_high_cutoff_q75": 0.0846
+  },
+  "outputs": {
+    "rulebook": "../outputs_rule_prioritization/rules/amp_rulebook_from_shap_and_surrogate.csv",
+    "ranked_candidates": "../outputs_rule_prioritization/tables/all_candidates_rule_aware_ranked.csv",
+    "top_candidates": "../outputs_rule_prioritization/candidates/top_50_rule_aware_candidates.csv",
+    "candidate_pool_summary": "../outputs_rule_prioritization/tables/candidate_pool_summary.csv",
+    "rule_diagnostics": "../outputs_rule_prioritization/tables/rule_level_diagnostics.csv",
+    "manuscript_rulebook": "../outputs_rule_prioritization/tables/manuscript_ready_rulebook.csv",
+    "manuscript_top_candidates": "../outputs_rule_prioritization/tables/manuscript_ready_top_20_candidates.csv"
+  }
+}

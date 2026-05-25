@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-05-23T02:02:47",
+  "notebook": "06_external_screening_and_illustrative_dtl_loop_fasta_only",
+  "candidate_source": "../collected_sequences/external_candidates.fasta",
+  "training_metadata_path": "../outputs_training/training_metadata.json",
+  "best_model_selection_path": "../outputs_training/best_model_selection.json",
+  "best_model_name": "extra_trees",
+  "ensemble_model_path": "../outputs_training/models/extra_trees_cv_ensemble.joblib",
+  "rulebook_path": "../outputs_rule_prioritization/rules/amp_rulebook_from_shap_and_surrogate.csv",
+  "n_raw_external_candidates": 16837,
+  "n_external_candidates_after_filtering": 3890,
+  "n_pseudo_feedback_candidates": 606,
+  "pseudo_feedback_thresholds": {
+    "positive_probability_cutoff": 0.85,
+    "negative_probability_cutoff": 0.15,
+    "high_rule_score_cutoff": 0.7,
+    "low_rule_score_cutoff": 0.3,
+    "low_uncertainty_cutoff_quantile_25": 0.3,
+    "min_pseudo_per_class_for_update": 5
+  },
+  "priority_score_formula": "0.55 * P(AMP) + 0.30 * soft_rule_score + 0.15 * confidence_score",
+  "updated_model_performed": true,
+  "important_note": "Pseudo-feedback labels are in silico model-supported labels and must not be interpreted as experimental validation. This notebook demonstrates operational design-test-learn logic.",
+  "outputs": {
+    "uniprot_raw_candidates": "../outputs_dtl_cycle/candidates/uniprot_raw_candidates.tsv",
+    "uniprot_query": "../outputs_dtl_cycle/candidates/uniprot_query.txt",
+    "cleaned_external_candidates": "../outputs_dtl_cycle/candidates/external_candidates_cleaned.csv",
+    "external_descriptors": "../outputs_dtl_cycle/tables/external_candidates_with_descriptors.csv",
+    "external_ranked_pre_feedback": "../outputs_dtl_cycle/tables/external_candidates_rule_aware_ranked_pre_feedback.csv",
+    "post_feedback_ranking": "../outputs_dtl_cycle/tables/external_candidates_ranked_after_pseudo_feedback_update.csv",
+    "manuscript_top_external_candidates": "../outputs_dtl_cycle/tables/manuscript_ready_top_external_candidates.csv",
+    "manuscript_dtl_summary": "../outputs_dtl_cycle/tables/manuscript_ready_dtl_cycle_summary.csv"
+  }
+}

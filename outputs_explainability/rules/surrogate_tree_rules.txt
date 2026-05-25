@@ -1,0 +1,43 @@
+|--- positive_fraction <= 0.2300
+|   |--- AAC_K <= 0.0694
+|   |   |--- AAC_M <= 0.0083
+|   |   |   |--- net_charge_pH_7_4 <= 1.0651
+|   |   |   |   |--- class: 0
+|   |   |   |--- net_charge_pH_7_4 >  1.0651
+|   |   |   |   |--- class: 1
+|   |   |--- AAC_M >  0.0083
+|   |   |   |--- negative_fraction <= 0.0531
+|   |   |   |   |--- class: 0
+|   |   |   |--- negative_fraction >  0.0531
+|   |   |   |   |--- class: 0
+|   |--- AAC_K >  0.0694
+|   |   |--- instability_proxy <= 39.4338
+|   |   |   |--- AAC_M <= 0.0348
+|   |   |   |   |--- class: 1
+|   |   |   |--- AAC_M >  0.0348
+|   |   |   |   |--- class: 0
+|   |   |--- instability_proxy >  39.4338
+|   |   |   |--- length <= 16.5000
+|   |   |   |   |--- class: 0
+|   |   |   |--- length >  16.5000
+|   |   |   |   |--- class: 1
+|--- positive_fraction >  0.2300
+|   |--- net_charge_pH_7_4 <= 2.0706
+|   |   |--- instability_proxy <= 35.1471
+|   |   |   |--- class: 1
+|   |   |--- instability_proxy >  35.1471
+|   |   |   |--- small_fraction <= 0.2971
+|   |   |   |   |--- class: 1
+|   |   |   |--- small_fraction >  0.2971
+|   |   |   |   |--- class: 0
+|   |--- net_charge_pH_7_4 >  2.0706
+|   |   |--- AAC_M <= 0.0220
+|   |   |   |--- hydrophobic_fraction <= 0.2804
+|   |   |   |   |--- class: 1
+|   |   |   |--- hydrophobic_fraction >  0.2804
+|   |   |   |   |--- class: 1
+|   |   |--- AAC_M >  0.0220
+|   |   |   |--- AAC_K <= 0.1342
+|   |   |   |   |--- class: 0
+|   |   |   |--- AAC_K >  0.1342
+|   |   |   |   |--- class: 1

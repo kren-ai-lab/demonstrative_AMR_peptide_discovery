@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-05-22T03:22:13",
+  "input_path": "../outputs/amp_model_ready_descriptors.csv",
+  "n_samples": 47175,
+  "n_descriptors": 41,
+  "descriptor_columns": [
+    "length",
+    "shannon_entropy",
+    "normalized_entropy",
+    "unique_residue_fraction",
+    "net_charge_pH_7_4",
+    "absolute_charge_pH_7_4",
+    "isoelectric_point_approx",
+    "positive_fraction",
+    "negative_fraction",
+    "charged_fraction",
+    "gravy",
+    "hydrophobic_fraction",
+    "polar_fraction",
+    "aromatic_fraction",
+    "small_fraction",
+    "molecular_weight",
+    "aliphatic_index",
+    "instability_proxy",
+    "helix_propensity",
+    "sheet_propensity",
+    "turn_propensity",
+    "AAC_A",
+    "AAC_C",
+    "AAC_D",
+    "AAC_E",
+    "AAC_F",
+    "AAC_G",
+    "AAC_H",
+    "AAC_I",
+    "AAC_K",
+    "AAC_L",
+    "AAC_M",
+    "AAC_N",
+    "AAC_P",
+    "AAC_Q",
+    "AAC_R",
+    "AAC_S",
+    "AAC_T",
+    "AAC_V",
+    "AAC_W",
+    "AAC_Y"
+  ],
+  "label_column": "label",
+  "sequence_column": "sequence",
+  "split_strategy": "descriptor-distance-aware geometric stratification with Euclidean MiniBatchKMeans clusters",
+  "split_fractions": {
+    "train": 0.7,
+    "validation": 0.2,
+    "test": 0.1
+  },
+  "distance_space": "z-score standardized descriptor space",
+  "n_cv_splits": 10,
+  "uncertainty_strategy": "standard deviation of positive-class probabilities across 10 cross-validation ensemble members",
+  "models": [
+    "logistic_regression",
+    "random_forest",
+    "extra_trees"
+  ],
+  "random_state": 42,
+  "python_version": "3.12.12",
+  "platform": "Linux-6.8.0-117-generic-x86_64-with-glibc2.39",
+  "artifacts": {
+    "logistic_regression": {
+      "final_model_path": "../outputs_training/models/logistic_regression_final_model.joblib",
+      "ensemble_model_path": "../outputs_training/models/logistic_regression_cv_ensemble.joblib",
+      "prediction_path": "../outputs_training/predictions/logistic_regression_predictions_with_uncertainty.csv"
+    },
+    "random_forest": {
+      "final_model_path": "../outputs_training/models/random_forest_final_model.joblib",
+      "ensemble_model_path": "../outputs_training/models/random_forest_cv_ensemble.joblib",
+      "prediction_path": "../outputs_training/predictions/random_forest_predictions_with_uncertainty.csv"
+    },
+    "extra_trees": {
+      "final_model_path": "../outputs_training/models/extra_trees_final_model.joblib",
+      "ensemble_model_path": "../outputs_training/models/extra_trees_cv_ensemble.joblib",
+      "prediction_path": "../outputs_training/predictions/extra_trees_predictions_with_uncertainty.csv"
+    }
+  },
+  "best_model": {
+    "selection_metric": "validation_ensemble_mcc",
+    "best_model": "extra_trees",
+    "best_model_validation_metrics": {
+      "model": "extra_trees",
+      "partition": "validation_ensemble",
+      "n_samples": 9435,
+      "mcc": 0.6495003295329281,
+      "roc_auc": 0.9082803182789574,
+      "pr_auc": 0.8669068438399573,
+      "balanced_accuracy": 0.796769282321818,
+      "f1": 0.7414155571128241,
+      "accuracy": 0.8435612082670906,
+      "precision": 0.8794679966749792,
+      "recall": 0.6408237431859479,
+      "tn": 5843,
+      "fp": 290,
+      "fn": 1186,
+      "tp": 2116
+    },
+    "artifacts": {
+      "final_model_path": "../outputs_training/models/extra_trees_final_model.joblib",
+      "ensemble_model_path": "../outputs_training/models/extra_trees_cv_ensemble.joblib",
+      "prediction_path": "../outputs_training/predictions/extra_trees_predictions_with_uncertainty.csv"
+    }
+  }
+}
